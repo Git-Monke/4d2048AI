@@ -15,8 +15,8 @@ from bs4 import BeautifulSoup
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
-# number_of_state_checks = 100
-simulations_per_state = 100
+# number_of_state_checks = 800
+simulations_per_state = 200
 moves_per_simulation = 100000
 
 action_types = [
@@ -127,27 +127,10 @@ if __name__ == "__main__":
         if board.is_over:
             print(board.board)
             break
-
-        print("Choosing next move...")
         next_move_type, next_move_direction = choose_next_move(board)
         actions.send_keys(action_types[next_move_type][next_move_direction])
         actions.perform()
         time.sleep(0.1)
-
-    # source = driver.page_source
-
-    # board = get_game_state(source)
-
-    # board.board[0][0] = 2
-    # board.board[1][0] = 2
-
-    # while not board.is_over:
-    #     move_type, move_direction = choose_next_move(board)
-    #     if move_type == 0:
-    #         board.small_move(move_direction)
-    #     else:
-    #         board.large_move(move_direction)
-    #     print(board.board)
 
     print("Game is over")
     input()
