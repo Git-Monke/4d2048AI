@@ -1,0 +1,5 @@
+[This](https://www.youtube.com/watch?v=rMOVUGM9PiY) is a video of the AI in action. Please watch!
+
+## 4d2048 AI
+
+This is a quick 4d2048 I threw together after I saw some friends in class playing the game. Most of them couldn't get past the 256 block, and after trying my hand at it I realized I couldn't do much better. So I did what I knew best! I made an AI to do it for me. This AI uses a super simple algorithm. It parses the state of the game from the HTML using BeautifulSoup. It then clones that state. Then for each possible move, it creates a cloned board for that move. Then it randomly performs a move for each cloned state until that cloned state reaches the end of the game. It does this a certain number of times and then chooses the move which ends in the best state the largest number of times. The bot you see playing here runs only 200 simulations to the end of the game per potential move. This amounts to about 1600 games per decision, and about 180,000 moves evaluated. I could probably do a much better job using some form of Monte Carlo tree search, however, this was much easier to implement and got the job done!
