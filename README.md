@@ -1,4 +1,4 @@
-[This](https://www.youtube.com/watch?v=rMOVUGM9PiY) is a video of the AI in action. Please watch!
+# [This](https://www.youtube.com/watch?v=rMOVUGM9PiY) is a video of the AI in action. Please watch!
 
 ## 4d2048 AI
 
